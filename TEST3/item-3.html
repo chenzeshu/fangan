@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+    <title>3D Folding Panel</title>
+</head>
+<body>
+<div class="cd-fold-content single-page">
+
+<?php
+ session_start();
+ $username = $_SESSION['username'];
+         if($username === "admin"){
+             if(isset($_POST['name'])&&isset($_POST['password'])&&isset($_POST['password-confirm'])&&isset($_POST['xingming'])){
+                 if($_POST['password']==$_POST['password-confirm']){
+                     $db = new mysqli('localhost', 'root', 'chenzeshu8', 'workbase');
+                     $db ->set_charset('UTF8');
+    if($db->connect_errno){
+    echo "无法连接服务器";
+    exit();
+    }else{
+    var_dump($_POST);
+    $name=$_POST['name'];
+    $password=$_POST['password'];
+    $xingming=$_POST['xingming'];
+    $query ="INSERT INTO worklist VALUES(NULL,'".$name."','".$password."','".$xingming."',null)";
+    $result = $db->query($query);
+    if($result){
+    header("location:index.php");
+    }else {
+    echo "注册失败";
+    }
+    $db->close();
+    }
+    }else{
+    echo "密码不一致";
+    }
+    }else{
+    echo "请填写数据";
+    }
+    }else{
+
+    header('location:index.php');
+    }
+    ?>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">添加平台用户</div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <form method="post" action="sign_up.php" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">用户名</label>
+                        <div class="col-lg-6">
+                            <input class="form-control" type="text" name="name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">输入密码</label>
+                        <div class="col-lg-6">
+                            <input class="form-control" type="password" name="password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">再一次输入密码</label>
+                        <div class="col-lg-6">
+                            <input class="form-control" type="password" name="password-confirm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">真实姓名</label>
+                        <div class="col-lg-6">
+                            <input class="form-control" type="text" name="xingming">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-2 col-lg-push-3">
+                            <button type="submit" class="btn btn-primary">确认添加</button>
+                        </div>
+                        <div class="col-lg-2 col-lg-push-3">
+                            <button type="button" class="btn btn-default">返　回</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+</div>
+</body>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>

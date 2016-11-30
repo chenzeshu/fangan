@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>优酷网首页</title>
+    <meta name="author" content="繁转">
+    <meta name="copyright" content="繁转社">
+    <link rel="stylesheet" href="css/default.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div class="headerBox">
+
+    <div class="header comWidth">
+        <div class="logo fl">
+            <a href="#"><img src="images/logo.png" alt=""></a>
+        </div>
+        <div class="searchBox fl">
+            <input type="text" class="search_input fl">
+            <input type="button"  class="search_btn fl">
+            <!--hover搜索预览内容-->
+            <div class="search_show">
+                <ul class="search_list fl">
+                    <li><a href="#">繁转社</a><span>更新至17集</span></li>
+                    <li><a href="#">繁转社</a><span>更新至17集</span></li>
+                    <li><a href="#">繁转社</a><span>更新至17集</span></li>
+                    <li><a href="#">繁转社</a><span>更新至17集</span></li>
+                    <li><a href="#">繁转社</a><span>更新至17集</span></li>
+                    <li><a href="#">繁转社</a><span>更新至17集</span></li>
+                </ul>
+                <dl class="imgShow fl">
+                    <dt><a href="#"><img src="images/imgShow.png" alt=""></a></dt>
+                    <dd>
+                        <div class="imgShowTxt">
+                            <h3>综艺</h3>
+                            <p>主持人：反转</p>
+                            <p>地区：域外</p>
+                        </div>
+                        <a href="#" class="imgShow_play"></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <ul class="menu fr">
+            <li>
+                <div class="menu-text">
+                    <a href="#">登录</a><span>|</span><a href="#">注册</a>
+                </div>
+                <div class="menu-show login-left">
+                    <div class="menu-content">
+                        <h3 class="infoCenter">登录个人中心，观看精彩视频</h3>
+                        <div class="loginBox clearfix">
+                            <a href="#" class="login_btn"></a>
+                            <a href="#" class="reg_btn"></a>
+                        </div>
+                        <div class="menu_line"></div>
+                        <ul class="userCont clearfix">
+                            <li><a href="#">观看记录</a></li>
+                            <li><a href="#">我的收藏</a></li>
+                            <li><a href="#">我的追剧</a></li>
+                            <li><a href="#">我的订阅</a></li>
+                        </ul>
+                        <div class="menu_line"></div>
+                        <ul class="userCont clearfix">
+                            <li><a href="#">视频管理</a></li>
+                            <li><a href="#">我的空间</a></li>
+                            <li><a href="#">优酷会员</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="active">
+                <div class="menu-text">
+                    <a href="#">观看记录</a>
+                </div>
+                <div class="menu-show record-left">
+                    <div class="menu-content">
+                        <div class="record_item">
+                            <div class="record_title">
+                                <span>一周内</span><a href="#">管理观看记录</a>
+                            </div>
+                            <h3 class="video-title">繁转社喝水教程---一天1800ML繁转社喝水教程---一天1800ML</h3>
+                            <div class="rate pc">看到50%</div>
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <div class="menu-text">
+                    <a href="#"> 上传</a>
+                </div>
+                <div class="menu-show upload-left">
+upload
+                </div>
+
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+</body>
+<script>
+    $(function () {
+        $('.menu li').on('click',function () {
+            $('.menu li').removeClass()
+            $(this).addClass('active')
+        })
+    })
+</script>
+</html>

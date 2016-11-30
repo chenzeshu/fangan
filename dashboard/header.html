@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标题</title>
+</head>
+<link rel="stylesheet" href="css/uikit.min.css">
+<link href="//cdn.bootcss.com/uikit/2.26.4/css/uikit.gradient.min.css" rel="stylesheet">
+
+<style>
+    html,body {margin:0;padding:0}
+    .hd-style{
+        padding:8px 0;
+        box-shadow: 0px 5px 5px #E0E0E0;
+    }
+    .uk-navbar{
+        background: #ffffff;
+    }
+    #leftNav{
+        width:15%;
+        color:#F7F7F7;
+    }
+    .uk-panel-box{
+        background:#F4F4F4;
+        -webkit-border-radius:3px;
+        -moz-border-radius:3px;
+        border-radius:3px;
+    }
+    .navCollapse{
+        position:absolute;
+        z-index:9999;
+        margin:0.5% 0 0 11.5%
+    }
+    .navShow{
+        position:absolute;
+        z-index:9999;
+        margin:0.5% 0 0 2%
+    }
+</style>
+<body>
+<div class="hd-style uk-width-1-1" id="hd-father">
+    <nav class="uk-navbar">
+        <ul class="uk-navbar-nav">
+            <li><a href=""><img src="img/logo1.png" alt=""></a></li>
+            <li><a href="">南京中网卫星通信股份有限公司</a></li>
+        </ul>
+        <div class="uk-navbar-flip">
+            <ul class="uk-navbar-nav">
+                <!-- 启用JavaScript的容器 -->
+                <li class="uk-parent" data-uk-dropdown="{mode:'click'}">
+                    <!-- 拨动下拉菜单的导航项 -->
+                    <a href="">用户名&nbsp;&nbsp;<i class="uk-icon-chevron-circle-down"></i></a>
+                    <!-- 下拉菜单 -->
+                    <div class="uk-dropdown uk-dropdown-small">
+                        <ul class="uk-nav uk-nav-dropdown">
+                            <!--logout-->
+                            <li><a href="">退出登录</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div>
+    <ul class="uk-pagination">
+        <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
+        <li class="uk-active"><span>1</span></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><span>...</span></li>
+        <li><a href="#">20</a></li>
+        <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
+    </ul>
+
+</div>
+<!--第二栏-->
+<a href="#" class="uk-icon-button uk-icon-arrows-h navCollapse" onclick="collapseNav()"></a>
+<a href="#" class="uk-icon-button uk-icon-arrows-h navShow" onclick="showNav()"></a>
+<div class="uk-grid">
+    <div class="uk-width-1-4" id="leftNav">
+        <div class="uk-panel uk-panel-box">
+
+            <ul class="uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav>
+                <li class="uk-active" onclick="active(this)"><a href="#">人事部</a></li>
+
+                <li class="uk-parent" onclick="active(this)">
+                    <a href="#">项目管理部</a>
+                    <ul class="uk-nav-sub">
+                        <li><a href="#">Sub item</a></li>
+                        <li><a href="#">Sub item</a>
+                            <ul>
+                                <li><a href="#">Sub item</a></li>
+                                <li><a href="#">Sub item</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="uk-parent" onclick="active(this)">
+                    <a href="#">质检部</a>
+                    <ul class="uk-nav-sub">
+                        <li><a href="#">Sub item</a></li>
+                        <li><a href="#">Sub item</a></li>
+                    </ul>
+                </li>
+
+                <li onclick="active(this)"><a href="#">集成规划所</a></li>
+                <li onclick="active(this)"><a href="#">知识产权</a></li>
+
+                <li class="uk-nav-header">Header</li>
+                <li class="uk-parent"><a href="#"><i class="uk-icon-star"></i> Parent</a></li>
+                <li><a href="#"><i class="uk-icon-twitter"></i> Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#"><i class="uk-icon-rss"></i> Item</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="uk-width-3-4">111</div>
+</div>
+
+
+
+
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/uikit.min.js"></script>
+<script>
+    $(function(){
+        $('.navShow').hide()
+    })
+
+    function collapseNav(){
+        $('#leftNav').hide()
+        $('.navCollapse').hide()
+        $('.navShow').show()
+    }
+
+    function showNav(){
+        $('#leftNav').show()
+        $('.navCollapse').show();
+        $('.navShow').hide()
+
+    }
+    function active(obj){
+        var index = $(obj).prop('class')
+        if (index.indexOf('uk-active')==-1){
+            $(obj).addClass('uk-active')
+            $(obj).siblings().removeClass('uk-active')
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" class="html">
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-itunes-app" content="app-id=525948568">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>企业工作计划办公项目任务进度管理软件平台</title>
+
+    <!--Key:italent-login-css;Versions:1;Note:css;-->
+    <link href="//st-web.tita.com/titacn/tita/italent-login/styles/all-1611081104.min.css" rel="stylesheet"/>
+    <!--Key:italent-login-css end-->
+
+
+</head>
+<script type="text/javascript">
+
+    var defaultUrl = {
+        bg: '//st-web.tita.com/titacn/tita/italent-login/images/bg/tita-bg1-v2_s.jpg',
+        logo: 'http://upload-images.jianshu.io/upload_images/3157722-68b0bfc6b66475e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240'
+    }
+
+
+    var G_Info = {
+        yzmUrl: '/Account/Account/GetCaptchaImgV2/982b9b29-b85e-4c50-80d2-034b2e21e620'
+    };
+
+    var qrcodeUrl = '/Account/Account/QrCodeScanLogin';
+
+    var loginUrl = '/Account/Account/LogInITalent';
+    var loginData={"bgUrl":"","logoImgUrl":"","defaultMode":"account","loginMode":[{"type":"account","codeImgUrl":null,"requestUrl":null,"title":"账号"},{"type":"mobilePhone","codeImgUrl":null,"requestUrl":null,"title":"手机"},{"type":"QRCode","codeImgUrl":null,"requestUrl":null,"title":"微信"},{"type":"EnterpriseQQ","codeImgUrl":null,"requestUrl":"https://openapi.b.qq.com/oauth2/authorize?response_type=code&app_id=1300000042&redirect_uri=http%3A%2F%2Fqq.tita.com%2Fsso%2Fqq%2Flogin2&state=5B8A042D-E1A7-4B7C-B9D3-84BED1F1FB4A","title":"企业QQ"}],"loginResult":null};
+
+</script>
+<body>
+
+<div class="container">
+    <input name="ReturnUrl" type="hidden" />
+    <input type="hidden" name="valCodeKey" id="code-input" value="3995cade-5fdf-485c-a036-1c0fdfa2da25">
+    <!-- bg cover start-->
+    <div class="bg-wrap"></div>
+    <!--bg cover end-->
+    <!--login box start-->
+    <div class="login-box-wrap">
+        <div id="login-box" class="for-account account-no-valide mobilePhone-no-valide">
+            <!-- drag part -->
+            <div class="drag-part"></div>
+            <!-- logo part -->
+            <div class="logo-part"></div>
+            <!--error-->
+            <div class="error">
+                <span class="login-icon-error"></span>
+                <span class="error-msg"></span>
+            </div>
+
+            <!--login-form-->
+            <div class="form-part">
+
+                <!-- account login -->
+                <div class="login-type-item account-login">
+                    <div class="input-part">
+                        <label class="lg-icon login-icon-email"></label>
+                        <input class="email-name form-item" id="login_username" type="text" placeholder="邮箱/手机号" autocomplete="off">
+
+                        <span class="botton-line"></span>
+                    </div>
+                    <div class="input-part">
+                        <label class="lg-icon login-icon-psw"></label>
+                        <input class="psw form-item" type="password"  id="login_password" placeholder="密码"  autocomplete="off" />
+                        <span class="botton-line"></span>
+                    </div>
+                    <div class="validate-code img-vld-account ">
+                        <div class="input-part">
+                            <label class="lg-icon login-icon-valid"></label>
+                            <input class="valide-input form-item valide-input-account" id="login_code" type="text" placeholder="验证码">
+                            <span class="botton-line"></span>
+                        </div>
+                        <div class="vali-code-get">
+                            <img class="" src="" alt="验证码" />
+                        </div>
+                    </div>
+                    <div class="check-part">
+                        <div class="check-default">
+                            <div class="check-box ck-active" status="true">
+                                <span class="un-check"></span>
+                                <span class="in-check"></span>
+                            </div>
+                            <label class="text">自动登录</label>
+                        </div>
+                        <div class="forget-psw">
+                            <a href="//www.tita.com/Account/Account/FindPassword" tabindex="-1">忘记密码</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- mobilePhone login -->
+                <div class="login-type-item mobile-login">
+                    <div class="input-part">
+                        <label class="lg-icon login-icon-email"></label>
+                        <input class="mobile-number form-item" type="text" placeholder="手机号" id="login_phone" name="phonemumber" autocomplete="off">
+                        <span class="botton-line"></span>
+                    </div>
+                    <div class="validate-code">
+                        <div class="input-part">
+                            <label class="lg-icon login-icon-valid"></label>
+                            <input class="mobile-code form-item " type="text" id="login_code2" placeholder="验证码">
+                            <span class="botton-line"></span>
+                        </div>
+                        <div class="valid-code">
+                            <span class="click-event-ban"></span>
+                            <span class="get-code">获取验证码</span>
+
+                        </div>
+                    </div>
+                    <div class="validate-code img-vld-moblie">
+                        <div class="input-part">
+                            <label class="lg-icon login-icon-valid"></label>
+                            <input class="valide-input form-item valide-input-mb" type="text" placeholder="验证码">
+                            <span class="botton-line"></span>
+                        </div>
+                        <div class="vali-code-get">
+                            <img class="" src="" alt="验证码" />
+                        </div>
+                    </div>
+                </div>
+                <!-- SQcode login -->
+                <div class="login-type-item sq-code">
+                    <div class="erweima-drag">
+                        <span class="erweima-drag-info">二维码已失效</span>
+                    </div>
+                    <div class="erweima-drag-btn">点击刷新</div>
+                    <img class="sq-code-img" src="" alt="二维码">
+                    <div class="to-scan-box"><span class='to-scan'>微信扫一扫登录</span></div>
+                </div>
+
+            </div>
+            <div class="login-btn">
+                <span class="ripple"></span>
+                <span class="click-event-ban"></span>
+                <span class="login-title">登录</span>
+            </div>
+            <!--隐藏的空iframe-->
+
+
+            <!--login type switch-->
+            <div class="login-switch">
+                <div class="login-type-box"></div>
+            </div>
+        </div>
+    </div>
+    <!--login box end-->
+</div>
+
+<!--Key:italent-login-js;Versions:1;Note:css;-->
+<script language="JavaScript" type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/login/second.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/login/third.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/login/four.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/login/five.js"></script>
+<!--Key:italent-login-js end-->
+
+</body>
+</html>

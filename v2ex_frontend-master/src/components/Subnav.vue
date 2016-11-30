@@ -1,0 +1,38 @@
+<template>
+  <div class='uk-width-1-1 uk-row-first'>
+    <ul class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#switcher-content'}">
+      <li v-bind:class="{'uk-active': isThisTab(tab.key)}" v-for="(tab, index) in tabs">
+        <router-link :to="{name: 'index', query: {tab: tab.key}}">{{tab.value}}</router-link>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+  export default {
+    data () {
+      return {
+        tabs: [
+          {key: 'tech', value: '技术'},
+          {key: 'creative', value: '创意'},
+          {key: 'play', value: '好玩'},
+          {key: 'apple', value: 'Apple'},
+          {key: 'jobs', value: '酷工作'},
+          {key: 'deals', value: '交易'},
+          {key: 'city', value: '城市'},
+          {key: 'qna', value: '问与答'},
+          {key: 'hot', value: '最热'},
+          {key: 'all', value: '全部'},
+          {key: 'r2', value: 'R2'}
+        ]
+      }
+    },
+    //$route.query即foo?tab=xxx，可以从上方router-link看到 query:{tab:tab.key},
+    //其实query这个命名也是任意的，也可以用params一切看:to=''设计
+    methods: {
+      isThisTab: function (tab) {
+        return this.$route.query.tab === tab
+      }
+    }
+  }
+</script>

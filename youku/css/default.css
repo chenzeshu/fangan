@@ -1,0 +1,88 @@
+@charset "utf-8";
+/*清零*/
+body,uo,ol,li,p,hi,h2,h3,h4,h5,h6,form,form,fieldset,table,td,img,div,dl,dt,dd,input{  margin:0;  padding:0;  border:0;  }
+body{  font-size:12px;  }
+img{  border:none;  }
+ul,ol{  list-style-type: none;  }
+input,select,textarea{  outline:none;}
+textarea{  resize: none;}
+a{  text-decoration: none;}
+/*清浮动*/
+.clearfix:after{content:'';  display: block;  clear: both;}
+.clearfix{zoom:1;}
+
+/*头部*/
+.headerBox{
+    background: #f5f5f5;
+    height:60px;
+}
+.logo{
+    padding-top:10px;width:320px;
+}
+.searchBox{width:320px;padding-top:10px;position: relative;}
+.search_input{width:216px;height:14px;line-height:14px;border:2px solid #9F9F9F;border-right:none;padding:11px 6px;font-size:14px}
+.search_btn{width:90px;height:40px;background:url("../images/searchInput.png") left top no-repeat}
+/*搜索交互*/
+.search_hover{border-color:#3EABFF;display: none}
+.search_show{width:488px;
+    padding:2px 3px;border:2px solid #3EABFF;
+    position: absolute;left:0;top:48px;background:#FFF;
+    display: none;}
+.search_list{width:259px;font-size:14px;border-top:#F3F3F3 1px solid;
+    border-right:#F3F3F3 1px solid;}
+.search_list li{height:30px;line-height: 30px;
+    border-bottom:#F3F3F3 1px solid;margin-left:-40px;padding:0 8px 0 5px;}
+.search_list .active{ background:#F3F3F3}
+.search_list li a{float:left;color:#8F8F8F;}
+.search_list li span{float:right;font-size:12px;color:#8F8F8F;}
+.imgShow{width:180px;background:#F3F3F3;padding:6px 0 6px 8px;margin-top: 14px;}
+.imgShow dt{float:left;width:70px}  /*错写捣鼓出一个技巧*/
+.imgShow dt img{width:70px;height:105px;display:block}
+.imgShow dd{float:right;width:92px}
+.imgShow dd h3{ margin-bottom:5px}
+.imgShow dd h3 a { color: #000;font-size:14px}
+.imgShow p{color:#909090;line-height:22px;}
+.imgShow_play{width:65px;height:30px;background: url("../images/play.png") left top no-repeat;
+    display: block;margin-top:5px}
+
+/*右侧的菜单*/
+.menu li{float:left;position: relative;font-family:'微软雅黑';}
+.menu-text{height:24px;line-height:24px;padding:8px 24px;position:relative;z-index:2;float: left} /*float:left是专门为ie6添加的*/
+.menu-text span{padding:0 5px}
+.menu-text a{color:#535353;}
+.menu-show{display:none;width:329px;border:1px solid #dddddd;position: absolute;top:40px;height:300px;background:#fff}
+.menu .active .menu-show{display:block}
+.menu .active .menu-text{background:#FFF;border-left:1px solid #DDDDDD;border-right:1px solid #DDDDDD;padding:8px 23px}
+.login-left{left:-54px}
+.record-left{left:-163px}
+.upload-left{right:0}
+
+/*menu里的内容*/
+.menu-content{padding: 22px 20px}
+.infoCenter{font-size:14px;font-weight:normal;}
+.loginBox{padding:17px 0 4px 0}
+.loginBox a{width:110px;height:31px;float:left}
+.login_btn{
+    background: url("../images/loginbtn.png") left center no-repeat;}
+.reg_btn{
+    background: url("../images/reg.png") left center no-repeat;}
+.menu_line{border-top:1px dashed #E4E4E4;height:0;overflow:hidden;margin:14px 0}
+.userCont li{width:105px;float:left;height:16px;line-height: 16px;padding:7px 0 7px 0px}
+
+/*播放记录*/
+.record_title{height:45px}
+.record_title span{width:75px;height:24px;
+    float: left;background:#9B9B9B;text-align: center;color:#FFF}
+.record_title a{float:right;}
+.video-title{font-size:14px;width:262px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family: Verdana;height:24px}
+.rate{  font-family:'宋体';font-size:12px;color:#BBBBBB;padding-left:21px}
+
+
+
+
+
+
+/*通用样式*/
+.comWidth{ width:970px;margin:0 auto}
+.fl{ float: left;}
+.fr{ float: right;}
