@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/element-in-laravel-starter-master/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/maizuo-master/reduxMaizuo/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/maizuo-master/vueMaizuo/node_modules" />

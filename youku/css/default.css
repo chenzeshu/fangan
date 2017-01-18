@@ -20,7 +20,7 @@ a{  text-decoration: none;}
     padding-top:10px;width:320px;
 }
 .searchBox{width:320px;padding-top:10px;position: relative;}
-.search_input{width:216px;height:14px;line-height:14px;border:2px solid #9F9F9F;border-right:none;padding:11px 6px;font-size:14px}
+.search_input{width:216px;height:13px;line-height:14px;border:2px solid #9F9F9F;border-right:none;padding:11px 6px;font-size:14px}
 .search_btn{width:90px;height:40px;background:url("../images/searchInput.png") left top no-repeat}
 /*搜索交互*/
 .search_hover{border-color:#3EABFF;display: none}
@@ -47,10 +47,10 @@ a{  text-decoration: none;}
 
 /*右侧的菜单*/
 .menu li{float:left;position: relative;font-family:'微软雅黑';}
-.menu-text{height:24px;line-height:24px;padding:8px 24px;position:relative;z-index:2;float: left} /*float:left是专门为ie6添加的*/
+.menu-text{height:25px;line-height:24px;padding:8px 24px;position:relative;z-index:2;float: left} /*float:left是专门为ie6添加的*/
 .menu-text span{padding:0 5px}
 .menu-text a{color:#535353;}
-.menu-show{display:none;width:329px;border:1px solid #dddddd;position: absolute;top:40px;height:300px;background:#fff}
+.menu-show{display:none;width:329px;border:1px solid #dddddd;position: absolute;top:40px;background:#fff;}
 .menu .active .menu-show{display:block}
 .menu .active .menu-text{background:#FFF;border-left:1px solid #DDDDDD;border-right:1px solid #DDDDDD;padding:8px 23px}
 .login-left{left:-54px}
@@ -58,7 +58,7 @@ a{  text-decoration: none;}
 .upload-left{right:0}
 
 /*menu里的内容*/
-.menu-content{padding: 22px 20px}
+.menu-content{padding: 12px 20px;}
 .infoCenter{font-size:14px;font-weight:normal;}
 .loginBox{padding:17px 0 4px 0}
 .loginBox a{width:110px;height:31px;float:left}
@@ -70,19 +70,67 @@ a{  text-decoration: none;}
 .userCont li{width:105px;float:left;height:16px;line-height: 16px;padding:7px 0 7px 0px}
 
 /*播放记录*/
-.record_title{height:45px}
-.record_title span{width:75px;height:24px;
-    float: left;background:#9B9B9B;text-align: center;color:#FFF}
+.record_item{margin-bottom: 10px}
+.record_title{height:45px;}
+.record_title span{width:75px;height:24px;float:left;background:#9B9B9B;text-align: center;color:#FFF;font-size:15px }
 .record_title a{float:right;}
-.video-title{font-size:14px;width:262px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family: Verdana;height:24px}
-.rate{  font-family:'宋体';font-size:12px;color:#BBBBBB;padding-left:21px}
 
+.video-title{font-size:14px;height:24px;position:relative;font-weight:normal}
+.video-title a{color:#555555;width:262px;display: inline-block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    font-family: Verdana;}
+.video-title a:hover{color:#cb3311}
+.del{  position: absolute;right:0;top:0;display: none}
+.rate{  font-family:'宋体';font-size:12px;color:#BBBBBB;padding-left:21px;
+    margin-bottom:10px;}
+.rate span{float: left}
+.rate a{color:#3399df;float: right;display: none}
+.lookmore{text-align:center;}
+.lookmore a{color:#555555;}
+.lookmore a:hover{color:#cb3311;}
 
+/*交互*/
+.record_active .del{display: block}
+.record_active .rate a{display: block}
+.record_active .video-title a{
+    color: #cb3311;}
 
+/*导航*/
+/*.hr_19{border-bottom: 1px solid lightgray}*/
+/*.navBox{width:100%}*/
+/*.nav{display: inline-block;float: left}*/
+/*.nav li{float: left;margin-left:5px;position: relative}*/
+/*.navMenu{*/
+    /*display: inline-block;position: absolute;right:135px;top:0;}*/
+/*.nav_list{float: none}*/
+.navBox{height:46px;border-bottom:3px solid #e5e5e5}
+.nav{  font-size:16px;  font-family:"Microsoft YaHei";}
+.nav ul{text-align: center}
+.nav li{float: left;margin-right: 21px;position:relative;display:inline;
+    padding:0;}
+.nav li a{color:#555555;height:30px;float: left}
+.nav li span{float:left;padding:0 5px}
+.navMenu{float: left}
+.navShow{position:absolute;right:0; top:26px;background: #FFF;}
+
+.nav .active{color:#05A5DF;border-bottom:3px solid #05A5DF}
+.font14{font-size:14px;}
+
+.nav_list{
+    padding:0;
+}
+.nav_list li{
+    width:100%;
+    text-align:center;
+}
+.nav_list a{
+    display:block;
+    float:none !important;
+}
 
 
 
 /*通用样式*/
-.comWidth{ width:970px;margin:0 auto}
+.comWidth{ width:1080px;margin:0 auto}
 .fl{ float: left;}
 .fr{ float: right;}
+.hr_19{height:16px;overflow: hidden}

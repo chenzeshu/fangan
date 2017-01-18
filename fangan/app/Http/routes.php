@@ -7,6 +7,8 @@
  *
  * */
 Route::group(['middleware' => ['web']], function () {\
+	//测试
+	Route::any('test', 'Admin\loginController@test');
     //权限控制器
     Route::any('admin/auth', 'Entrust\EntrustController@index');
     //后台登陆

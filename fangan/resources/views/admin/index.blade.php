@@ -49,13 +49,6 @@
 				</ul>
 			</li>
 			@endrole
-			<li>
-				<h3><i class="fa fa-fw fa-clipboard"></i>查看</h3>
-				<ul class="sub_menu">
-					<li><a href="{{url('admin/jx')}}" target="main"><i class="fa fa-fw fa-plus-square"></i>列表</a></li>
-					<li><a href="{{url('admin/jx/create')}}" target="main"><i class="fa fa-fw fa-plus-square"></i>添加</a></li>
-				</ul>
-			</li>
         </ul>
 	</div>
 	<!--左侧导航 结束-->

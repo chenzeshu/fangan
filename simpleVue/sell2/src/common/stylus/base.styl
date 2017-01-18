@@ -1,0 +1,32 @@
+body,html
+  line-height: 1
+  font-weight: 200
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif
+
+.clearfix
+  display: inline-block
+  &:after
+    content: ''
+    display: block
+    height: 0
+    line-height: 0
+    clear: both
+    visibility: hidden
+
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)
+  .border-1px
+    &::after
+      -webkit-transform scaleY(0.7)
+      transform scaleY(0.7)
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+  .border-1px
+    &::after
+      -webkit-transform scaleY(0.5)
+      transform scaleY(0.5)
+
+      //伪类有7种，伪元素有4种
+      //在CSS2中，已经存在伪元素:after,:before，所以单冒号也可以写
+      //&:after与&::after其实是指同一个伪元素，双冒号，只兼容webkit的写法；如果是IE，就单冒号（因为有的IE不兼容CSS3）
+      //作者的习惯，是只要有webkit存在的地方，就用双冒号
+

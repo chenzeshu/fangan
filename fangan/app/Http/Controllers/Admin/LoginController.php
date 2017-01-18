@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 
-require_once "/resources/org/code/Code.class.php";
+require_once "resources/org/code/Code.class.php";
 
 class LoginController extends CommonController
 {
@@ -119,5 +119,11 @@ class LoginController extends CommonController
             ];
         }
         return $data;
+    }
+
+    public function test(){
+    	Input::except('_token');
+    	$name = $_FILES;
+    	dd($name);
     }
 }

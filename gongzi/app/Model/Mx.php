@@ -73,7 +73,7 @@ class Mx extends Model
         $job = Job::where('job_name',$name)->orderBy('job_date_change','desc')->first(); //得定岗工资+时间
         $employee = Employee::where('e_name', $name)->first();  //用来找出合同种类+房租
         $time = time();
-        $times = floor(($time-$job['job_date_enter'])%(31536000+432000));
+        $times = floor(($time-$job['job_date_enter'])/(31536000+432000));
         if ($times<6){
             $bu=$times*50;
         }elseif(5<$times&&$times<9){

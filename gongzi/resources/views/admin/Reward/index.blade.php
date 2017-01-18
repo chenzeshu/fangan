@@ -99,7 +99,7 @@
         //补0函数
         function AppendZero(obj)
         {
-            if(obj<10) return "0" +""+ obj;
+            if(obj<10) return "0" +""+ obj;  //空字符串的意义在于使obj必为字符串,因为有时候他可能是其他的东西
             else return obj;
         }
         //搜索符合条件的+Unix时间戳=>Js时间戳=>得到日期（补0)
